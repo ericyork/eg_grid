@@ -1,0 +1,46 @@
+*, *::after { /*-- selects everything and everything::after --*/
+  box-sizing: border-box; /*-- calculates padding as size of box --*/
+}
+#page {
+  width: 85%; /*-- restricts page width --*/
+  margin: 0 auto; /*-- uses auto margin to center everything --*/
+}
+.jumbo {
+  text-align: center; /*-- centers title text --*/
+  margin: 5em 0; /*-- adds top and bottom margin for title text --*/
+  border-bottom: 2px solid #ccc; /*-- adds a horizontal line --*/
+}
+/*-- Rules for Grid --*/
+.container { /*-- selects wrapper element --*/
+  display: grid; /*-- sets display to grid --*/
+  grid-template-columns: 1fr; /*-- sets the columns to 1 at smallest screen sizes --*/
+  grid-template-rows: auto; /*-- auto numbering of rows --*/
+  grid-gap: 3em 1em; /*-- sets top-bottom and left-right space between grid cells --*/
+}
+@media screen and (min-width: 550px) {  /*-- for screens above 550px  --*/
+  .container {grid-template-columns: repeat(2, 1fr);} /*-- increases column count to 2--*/
+  .card:first-child {grid-column: 1/ span 2;} /*-- allow first item to span 2 cells when screen is larger--*/
+}
+@media screen and (min-width: 1024px) { /*-- for screens above 1024px  --*/
+  .container {grid-template-columns: repeat(3, 1fr);} /*-- increase column count to 3 --*/
+}
+@media screen and (min-width: 1280px) { /*-- for screens above 1280px  --*/
+  .container {grid-template-columns: repeat(4, 1fr);} /*-- increase column count to 4 --*/
+}
+.card {
+  position: relative; /*-- positions each card so children can be positioned --*/
+  border: 1px solid #ccc; /*-- crappy border --*/
+  padding: 8px; /*-- small space inside each card--*/
+}
+.thumb { /*-- card images --*/
+  background-image: url('sample.png'); /*-- sets background image --*/
+  padding-bottom: 60%; /*-- creates space below the image--*/
+  background-size: cover; /*-- sets it to cover the div --*/
+  background-position: center center; /*-- positions image in center vert. and horiz. --*/
+}
+.link {
+  position: absolute; /*-- sets button position to absolute --*/
+  top: .5em; /*-- half a line from the top --*/
+  right: .5em; /*-- half a line from the right--*/
+  padding: .3em .6em; /*-- spacing inside the button --*/
+}
