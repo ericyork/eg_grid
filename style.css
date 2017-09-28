@@ -44,3 +44,9 @@
   right: .5em; /*-- half a line from the right--*/
   padding: .3em .6em; /*-- spacing inside the button --*/
 }
+/*-- Styles for slideshow --*/
+.slideshow-wrapper {
+  width: 90%;
+  position: relative;
+  margin: auto;
+}
