@@ -28,6 +28,9 @@
   border: 1px solid #ccc; /*-- crappy border --*/
   padding: 8px; /*-- small space inside each card--*/
 }
+video {
+  width: 100%;
+}
 .thumb { /*-- card images --*/
   background-image: url('pix/sample.png'); /*-- sets background image --*/
   padding-bottom: 60%; /*-- creates space below the image--*/
