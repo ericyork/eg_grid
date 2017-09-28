@@ -33,7 +33,7 @@
   padding: 8px; /*-- small space inside each card--*/
 }
 .thumb { /*-- card images --*/
-  background-image: url('sample.png'); /*-- sets background image --*/
+  background-image: url('pix/sample.png'); /*-- sets background image --*/
   padding-bottom: 60%; /*-- creates space below the image--*/
   background-size: cover; /*-- sets it to cover the div --*/
   background-position: center center; /*-- positions image in center vert. and horiz. --*/
