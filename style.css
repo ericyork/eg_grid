@@ -41,7 +41,16 @@ video {
   position: absolute; /*-- sets button position to absolute --*/
   top: .5em; /*-- half a line from the top --*/
   right: .5em; /*-- half a line from the right--*/
-  padding: .3em .6em; /*-- spacing inside the button --*/
+  padding: .3em .6em .4em .6em; /*-- spacing inside the button --*/
+  border-radius: 50%;
+  font-size: 22px;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  opacity: .9;
+}
+.link:hover {
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  opacity: 1;
 }
 /*-- Styles for slideshow --*/
 .slideshow-wrapper {
