@@ -7,7 +7,7 @@
 }
 /*-- Rules for Grid --*/
 .container { /*-- selects wrapper element --*/
-  margin-top: 5em;
+  margin-top: 3em;
   display: grid; /*-- sets display to grid --*/
   grid-template-columns: 1fr; /*-- sets the columns to 1 at smallest screen sizes --*/
   grid-template-rows: auto; /*-- auto numbering of rows --*/
@@ -104,16 +104,20 @@ video {
 }
 .indicator {
   cursor:pointer; /*-- changes hover cursor to the hand --*/
-  height: 13px; /*-- sets height of dots --*/
-  width: 13px; /*-- sets width of dots --*/
+  height: auto; /*-- sets height of dots --*/
+  width: 24%; /*-- sets width of dots --*/
   margin: 0 2px; /*-- adds margin between dots --*/
   background-color: #bbb; /*-- sets background color to light gray --*/
-  border-radius: 50%; /*-- makes dots fully round --*/
   display: inline-block; /*-- displays in a horizontal line --*/
   transition: background-color 0.6s ease; /*-- allows background change to take time --*/
+  opacity: .5;
+}
+.indicator img {
+  width: 100% !important;
 }
 .active, .indicator:hover {
   background-color: #717171; /*-- changes background color on hover/active to darker gray  --*/
+  opacity: 1;
 }
 /* Fading animation */
 .fade {
